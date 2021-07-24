@@ -3,6 +3,8 @@ import './main.css';
 
 import { Route, Link, Switch } from 'react-router-dom';
 import { Home, Write } from './index.js'; 
+import { Right_Write } from './right/index.js'; 
+
 
 
 
@@ -14,7 +16,7 @@ class main extends Component {
   render() {
 
     return (
-        <div className='Mains'>
+      <div className='Mains'>
             <div id='Mains-left'>
                 <h3> Left Side </h3>
             </div>
@@ -25,7 +27,7 @@ class main extends Component {
         </div>
 
         <div id='Mains-right'>
-          <h3> Right Side </h3>
+        <Route path='/write' component={Right_Write} />
         </div>
       </div>
 

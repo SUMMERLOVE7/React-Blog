@@ -9,9 +9,16 @@ class header extends Component {
   constructor(props){
     super(props);
     this.state = {
-      visible : true,
+      visible : false,
       id: "",
       password: "",
+      login : false,
+    }
+  }
+
+  componentDidMount() {
+    if(sessionStorage.login) {
+      this.setState({ login : true })
     }
   }
 
@@ -21,25 +28,25 @@ class header extends Component {
         visible : true
     });
   }
-
+  /*
   _logout = function() {
     if(window.confirm('로그아웃 하시겠습니까?')) {
       sessionStorage.removeItem('login')
       this.setState({ login : false })
     }
   }
+*/
 
-/*
   //modal 종료
   _closeModal = function() {
     this.setState({
         visible : false
     });
   }
-*/
+
   _changeID = function() {
     const id_v = document.getElementsByName('id')[0].value;
-    
+    //console.log(id)
     this.setState({
       id : id_v
     });
@@ -63,29 +70,44 @@ class header extends Component {
     } else if(password === "") {
       return alert('비밀번호를 입력해주세요.');
     }
-/*
-    const obj = { id : id, password : password }
 
+    //const obj = { id : id, password : password }
+
+    if(id === "admin" && password === "admin"){
+      this.setState({login : true})
+      this._closeModal();
+
+      return alert("로그인되었습니다.")
+    
+    /*  
     const res = await axios('/send/pw', {
       method : 'POST',
-      data : obj,
+      data : this.state,
+      //data : obj,
       headers: new Headers()
       })
 
       if(res.data) {
-        console.log(res.data.msg);
+        console.log(res.data)
+        //console.log(res.data.msg);
 
-        if(res.data.suc){
-          seesionStorage.setItem('login', true)
+        if(id === "admin" && password === "admin"){
           this.setState({login : true})
           this._closeModal();
 
-          return alert('로그인되었습니다')
+          return alert("로그인되었습니다.")
         }
-        else{
-          return alert('아이디 및 비밀번호가 일치하지않습니다.')
-        }
-      }*/
+        */
+        //if(res.data.suc){
+        //  seesionStorage.setItem('login', true)
+        //  this.setState({login : true})
+        //  this._closeModal();
+
+        //  return alert('로그인되었습니다')
+        //}
+      }
+        
+      
    }
 
   render() {
@@ -106,15 +128,40 @@ class header extends Component {
             </div>
 
             <div className='acenter'>
-              <ul className='btn_list'>
-            {this.state.login ? <h5 className='btn_cursor' onClick={() => this._logout()}> 로그아웃 </h5>
-                              : <h5 className='btn_cursor' onClick={() => this._openModal()}> 로그인 </h5>
-            } 
+              <h5 onClick={()=> this._openModal()}> 로그인 </h5>
+              <Modal visible={this.state.visible} width="400" height="300" effect="fadeInDown" onClickAway={()=>this._closeModal()}>
+            
+              <form>
+                <div className = 'login_div'>
+                  <div className = 'login_input_div'>
+                    <p> ID </p>
+                    <input type = 'text' name = 'id' onChange={()=> this._changeID()}/>
+                  </div>
+
+                  <div className = 'login_input_div' style ={{ 'marginTop' : '40px'}}>
+                    <p> Password</p>
+                    <input type ='text' name = 'password' onChange={()=> this._changePW()}/>
+                  </div>
+
+                  <div className = 'submit_div'>
+                    <div><input type = 'button' value = '로그인' onClick={()=>this._selectUserData()}/></div>
+                    <div><input type = 'button' value='닫기' onClick={()=> this._closeModal()}/> </div>
+                  </div>
+                </div>
+              </form>
+             
+            <div className='acenter'>
+              {this.state.login ? <h5 className = 'btn_cursor' onClick={()=> this._logout()}> 로그아웃</h5>
+                                : <h5 className = 'btn_cursor' onClick={()=> this._openModal()}> 로그인 </h5>
+                                }
             
                
-                </ul>
+                
+            </div>
+            </Modal>
             </div>
         </div>
+        
     );
 
   }

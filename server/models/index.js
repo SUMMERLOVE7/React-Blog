@@ -40,6 +40,7 @@ let sequelize = new Sequelize(
     });
 
     db.Admin = require('./admin')(sequelize, Sequelize);
+    db.Board = require('./board')(sequelize, Sequelize);
 
     /*
     Sequelize 연동 성공시, "Connection has been established successfully." 문구가 출력이 되고
