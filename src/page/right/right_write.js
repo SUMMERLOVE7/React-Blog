@@ -46,7 +46,7 @@ class right_write extends Component {
     return (
         <div>
           <div id='post_submit'>
-            <button> 포스트 등록 </button>
+            <button> Register </button>
           </div>
         </div>
     );

@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 .Mains {
     display: grid;
     grid-template-columns: 19% 62% 19%;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
-#Mains-left { border-right: solid 1px #41a041; }
-#Mains-right { border-left: solid 1px #3e993e; }
+#Mains-left { border-right: solid 1px #f7f7f7; }
+#Mains-right { border-left: solid 1px #f2f0f3; }
 
 .Write {
-    padding: 20px;
+    padding: 30px;
     padding-left: 30px;
+    background-color: rgb(209, 222, 238);
 }
 
 .Write div {
@@ -18,10 +24,12 @@
 
 #title_txt {
     width: 91%;
+    height : 25px;
+    line-height: 25px;
     padding-left: 10px;
     padding-bottom: 30px;
     border: none;
-    font-size: 22px;
+    font-size: 25px;
     border-bottom: solid 1px #ababab;
     font-weight: bold;
 }
@@ -30,7 +38,7 @@
 
 
 #content_txt {
-    width: 95%;  
+    width: 96%;  
     font-size: 18px;
     resize: none;
     border: none;
@@ -47,11 +55,13 @@
 
 #post_submit button {
     width: 120px;
+    height : 100px;
     padding: 5px;
     border-radius: 5px;
     border: solid 1px #ababab;
     cursor: pointer;
-    background-color: rgb(149, 206, 127);
+    background-color: rgb(169, 170, 159);
+    font-family: 'Raleway', sans-serif;
 }
 
 .List {
@@ -59,11 +69,12 @@
     margin-left: 20px;
     margin-right: 20px;
     min-height: 500px;
+    background-color: rgb(163, 188, 235);
 }
 
 .list_tit {
-    border-bottom: solid 1px #ababab;
-    color : #ababab;
+    border-bottom: solid 1px #0e0a0a;
+    color : #0f0c0c;
 }
 
 .list_grid {
@@ -81,7 +92,7 @@
 
 .paging_div {
     margin-top: 10px;
-    border-top: solid 1px #ababab;
+    border-top: solid 1px #181313;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     text-align: center;
