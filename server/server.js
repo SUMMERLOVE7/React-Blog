@@ -1,7 +1,16 @@
 const express = require('express');
 const app = express();
+const router = require('./route');
+const cors = require('cors');
 const PORT = process.env.PORT || 4000;
-//const db = require('./config/db');  //RDS와 서버 연결
+const db = require('./config/db');  //RDS와 서버 연결
+
+////
+const members=require('./routes/members');
+const categories=require('./routes/categories');
+const boards=require('./routes/boards');
+const comments=require('./routes/comments');
+////
 
 const sequelize = require('./models').sequelize;
 const bodyParser = require('body-parser')
@@ -12,9 +21,29 @@ sequelize.sync({ force: true });  //모든 데이터 조회
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors());
 
 app.use('/', router);
 
+////
+app.use('/members',members);
+app.use('/categories',categories);
+app.use('/boards',boards);
+app.use('/comments',comments);
+
+app.listen(3306,()=>{
+    console.log("running");
+});
+////
+
+const session = require('express-session')
+app.use(session({
+	secret:'keyboard cat',
+	resave:false,
+	saveUninitialize:true
+}));
+
+/*
 //Teacher 테이블을 서버로 가져와 읽을 수 있도록
 const {
     Teacher,
@@ -59,6 +88,7 @@ app.post('/delete/data', (req, res) => {
     .then( res.sendStatus(200) )
     .catch( err => { throw err })
 })
+*/
 
 /*
 //여러개의 데이터 변경
