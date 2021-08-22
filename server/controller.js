@@ -1,12 +1,12 @@
 const psth = require('path');
-const model = require('./model');
+const model = require('./models');
 
-
-const salt  = require(path.join(__dirname, 'config', 'db.json'))
+/*
+const salt  = require(path.join(__dirname, 'config', 'dbConfig.js'))
  .salt
+*/
 
-
-const hashing = require(path.join(__dirname, 'config', 'hashing.js'))
+//const hashing = require(path.join(__dirname, 'config', 'hashing.js'))
 
 
 module.exports = {

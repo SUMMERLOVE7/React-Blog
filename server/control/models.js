@@ -1,15 +1,14 @@
 const sequelize = require("./models").sequelize;
-const Op = require("sequelize");
+
 
 const {
     Admin,
     Board,
     Category,
     Member,
-    //Sequelize: { Op }
+    Sequelize: { Op }
   } = require('./models');
-//여기아래줄오류
-//sequelize.query('SET NAMES utf8;');
+sequelize.query('SET NAMES utf8;');
 
 module.exports = {
     api : {
