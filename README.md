@@ -1,5 +1,5 @@
-🐳 PERSONAL BLOG WEBSITE 🐳
-📋 Index
+# 🐳 PERSONAL BLOG WEBSITE 🐳
+## 📋 Index
 Description
 Details & Functions
 Development Stack
@@ -9,11 +9,11 @@ Contributors
 References
 How to run this project
 
-📌 Description
+##📌 Description
 This is a personal blog website builds on React.
 
 
-🔎 Details & Functions
+##🔎 Details & Functions
 Login ( local / google-OAuth)
 CRUD
 Pagination
@@ -21,24 +21,24 @@ Design and create website using React and Nodejs
 Connect with MySQL
 Build image using Docker
 
-🛠 Development Stack
+##🛠 Development Stack
 React
 Nodejs
 Docker
 
-❤️ Frontend
-🎨 Design
+##❤️ Frontend
+###🎨 Design
 image
 
 
-📁 Structure
+###📁 Structure
 src : Directory for frontend code
 src/views/image : Directory for background image of website
 src/views/inc : Directory for website header
 src/views/page : Directory for total function of website
 
-💙 Backend
-📄 DB&API Spec
+##💙 Backend
+###📄 DB&API Spec
 DB Spec
 
 members
@@ -97,13 +97,13 @@ GET api/get/category
 Update Categories
 PUT api/update/category
 
-📁 Structure
+###📁 Structure
 server/config : Directory for security maintenance
 server/db : Directory for construction of database
 server/models : Directory for sequelize models
 server/routers : Directory for defining routes
 
-👸 Contributors
+##👸 Contributors
 Minji Chang https://github.com/SUMMERLOVE7
 Hyosin Jang https://github.com/hyosin-Jang
 Seojin Kwak https://github.com/SJ-Kwak
