@@ -1,121 +1,121 @@
 # 🐳 PERSONAL BLOG WEBSITE 🐳
 ## 📋 Index
-Description
-Details & Functions
-Development Stack
-Frontend
-Backend
-Contributors
-References
-How to run this project
+Description   
+Details & Functions   
+Development Stack   
+Frontend   
+Backend   
+Contributors   
+References   
+How to run this project   
 
-## 📌 Description
-This is a personal blog website builds on React.
+## 📌 Description   
+This is a personal blog website builds on React.   
 
 
 ## 🔎 Details & Functions
-Login ( local / google-OAuth)
-CRUD
-Pagination
-Design and create website using React and Nodejs
-Connect with MySQL
-Build image using Docker
+Login ( local / google-OAuth)   
+CRUD   
+Pagination   
+Design and create website using React and Nodejs   
+Connect with MySQL   
+Build image using Docker   
 
 ## 🛠 Development Stack
-React
-Nodejs
-Docker
+React   
+Nodejs   
+Docker   
 
 ## ❤️ Frontend
 ### 🎨 Design
-image
+image   
 
 
 ### 📁 Structure
-src : Directory for frontend code
-src/views/image : Directory for background image of website
-src/views/inc : Directory for website header
-src/views/page : Directory for total function of website
+src : Directory for frontend code   
+src/views/image : Directory for background image of website   
+src/views/inc : Directory for website header   
+src/views/page : Directory for total function of website   
 
 ## 💙 Backend
 ### 📄 DB&API Spec
-DB Spec
+DB Spec   
 
 members
-id : Unique user id
-email : Google email
-name : Google givenName
-picture : Google picture
-categories
-category: Category name
-boards
-num: Unique posts id
-category: Category name
-title: Title of posts
-id: Unique user id
-content: Content of posts
-date: Posting time
-hit: View count
-comments
-id: Unique user id
-num: Unique comment id
-board_num: Unique board id
-content: Content of comments
-API Spec
+id : Unique user id   
+email : Google email   
+name : Google givenName   
+picture : Google picture   
+categories   
+category: Category name   
+boards   
+num: Unique posts id   
+category: Category name   
+title: Title of posts   
+id: Unique user id   
+content: Content of posts   
+date: Posting time   
+hit: View count   
+comments   
+id: Unique user id   
+num: Unique comment id   
+board_num: Unique board id   
+content: Content of comments   
+API Spec   
 
-boards
-Add Posts
-POST api/add/board
-Get a list of posts
-GET api/get/board
-Update Posts
-PUT api/update/board
-Delete Posts
-DELETE api/delete/board
-Get a detailed posting
-GET api/get/board_data
-Update View Count
-PUT api/update/hit
-Get a Number of Postings
-GET api/get/board_cnt
-Get a Content of Previous and Next Button
-GET api/get/prev_and_next
-comments
-Add Comments
-POST api/add/comment
-Get Comments
-GET api/get/comment
-Update Comments
-PUT api/update/comment
-Delete Comments
-DELETE api/delete/comment
-categories
-Add Categories
-POST api/add/category
-Get Categories
-GET api/get/category
-Update Categories
-PUT api/update/category
+boards   
+Add Posts   
+POST api/add/board   
+Get a list of posts   
+GET api/get/board   
+Update Posts   
+PUT api/update/board   
+Delete Posts   
+DELETE api/delete/board   
+Get a detailed posting   
+GET api/get/board_data   
+Update View Count   
+PUT api/update/hit   
+Get a Number of Postings   
+GET api/get/board_cnt   
+Get a Content of Previous and Next Button   
+GET api/get/prev_and_next   
+comments   
+Add Comments   
+POST api/add/comment   
+Get Comments   
+GET api/get/comment   
+Update Comments   
+PUT api/update/comment   
+Delete Comments   
+DELETE api/delete/comment   
+categories   
+Add Categories   
+POST api/add/category   
+Get Categories   
+GET api/get/category   
+Update Categories   
+PUT api/update/category   
 
 ### 📁 Structure
-server/config : Directory for security maintenance
-server/db : Directory for construction of database
-server/models : Directory for sequelize models
-server/routers : Directory for defining routes
+server/config : Directory for security maintenance   
+server/db : Directory for construction of database   
+server/models : Directory for sequelize models   
+server/routers : Directory for defining routes   
 
 ## 👸 Contributors
-Minji Chang https://github.com/SUMMERLOVE7
-Hyosin Jang https://github.com/hyosin-Jang
-Seojin Kwak https://github.com/SJ-Kwak
-SeonUi Lee https://github.com/sunnyineverywhere
+Minji Chang https://github.com/SUMMERLOVE7   
+Hyosin Jang https://github.com/hyosin-Jang   
+Seojin Kwak https://github.com/SJ-Kwak   
+SeonUi Lee https://github.com/sunnyineverywhere   
 
 
-References
-https://grave-waterlily-5e9.notion.site/43bd1cea60e8443eac4782d736c8f383
+References   
+https://grave-waterlily-5e9.notion.site/43bd1cea60e8443eac4782d736c8f383   
 
 
-How to Run this project
-git clone https://github.com/hyosin-Jang/blog-backend.git
+How to Run this project   
+git clone https://github.com/SUMMERLOVE7/React-Blog.git
 npm install
 yarn dev
 
